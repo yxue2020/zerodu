@@ -20,6 +20,9 @@ class Welcome extends Controller
 		$mod_city->index();
 
 		Item::index();
+
+		echo "<hr>";
+		print_r($_GET);
 		// var_dump();
 	}
 }

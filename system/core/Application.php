@@ -1,10 +1,15 @@
 <?php
 namespace noah;
 
+defined('_NAMESPACE_')  OR define('_NAMESPACE_', 'app\controllers');
+
+/**
+ * Application
+ */
 class Application
 {
-	// protected $action = '';
-	// protected $default_action = 'welcome';
+	protected $default_site = 'Welcome';
+	protected $default_action = 'index';
 
 	function __construct()
 	{
@@ -14,22 +19,28 @@ class Application
 	public function run()
 	{
 		try {
-			// if(PHP_SAPI === 'cli') {
-			// 	die("Error: Not Run CLI" . PHP_EOL);
-			// }
+			// @list($classname, $action) = $this->_parse_request_uri();
+			print_r($_SERVER); exit;
 
-			// $this->_parse_request_uri();
-			$classname = 'app\controllers\Welcome';
-			$action = 'index';
+			if (is_null($classname)) {
+				$classname = $this->default_site;
+			}
 
-			if (class_exists($classname)) {
+			if (is_null($action)) {
+				$action = $this->default_action;
+			}
+
+			$classname = _NAMESPACE_ . '\\' . $classname;
+			if (method_exists($classname, $action)) {
 				$class = new $classname();
 				call_user_func(array(&$class, $action));
 			} else {
-				throw new Exception("Error Not Found Class: $classname" . PHP_EOL, 1);
+				// 404 Not Found.
+				@header("http/1.1 404 not found");
+				@header("status: 404 not found");
+				echo "<h1>404 not found</h1>" . PHP_EOL;
 			}
 		} catch (Exception $e) {
-			// todo
 			print_r($e->getMessage());
 		}
 	}
@@ -40,8 +51,8 @@ class Application
 			return array();
 		}
 
-		// /user/login?name=absd&pwd=123456
-		$uri = $_SERVER['REQUEST_URI'];
-		print_r($uri);
+
+
+		return array();
 	}
 }
