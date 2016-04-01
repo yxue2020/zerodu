@@ -1,0 +1,21 @@
+{
+    "name": "Zerodu Framework",
+    "description": "一个轻量的PHP框架",
+    "authors": [
+        {
+            "name": "huangchao",
+            "email": "huangchao@foxmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "repositories": [
+        {"type": "composer", "url": "http://packagist.phpcomposer.com"},
+        {"packagist": false}
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+
+    }
+}
