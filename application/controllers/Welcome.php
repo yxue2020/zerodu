@@ -1,9 +1,11 @@
 <?php
-// namespace app\controllers
+namespace app\controllers;
 
-use noah\common
+use common\City;
+use app\models\Item;
 
-class Welcome
+use noah\Controller;
+class Welcome extends Controller
 {
 	function __construct()
 	{
@@ -12,8 +14,13 @@ class Welcome
 
 	public function index()
 	{
-		echo "hello noah" . PHP_EOL;
-		// echo __class__ . '->' . __function__ . '()' . PHP_EOL;
+		echo __class__ . '->' . __function__ . '()' . PHP_EOL;
+
+		$mod_city = new City();
+		$mod_city->index();
+
+		Item::index();
+		// var_dump();
 	}
 }
 

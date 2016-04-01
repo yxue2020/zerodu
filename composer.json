@@ -16,8 +16,15 @@
         "php": ">=5.4.0"
     },
     "autoload": {
+        "files": [
+            "system/core/Application.php",
+            "system/core/Controller.php",
+            "system/core/Model.php"
+        ],
         "psr-4": {
-            "noah\\": "system/"
+            "app\\": "application/",
+            "common\\": "common/",
+            "config\\": "config"
         }
     }
 }

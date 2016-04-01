@@ -6,5 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'noah\\' => array($baseDir . '/system'),
+    'config\\' => array($baseDir . '/config'),
+    'common\\' => array($baseDir . '/common'),
+    'app\\' => array($baseDir . '/application'),
 );
