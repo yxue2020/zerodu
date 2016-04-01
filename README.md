@@ -1,17 +1,26 @@
-# zerodu
+Zerodu Framework
+================
 
 ## 目录结构
 ```
 .
-├── README.md
+| (业务层)
 ├── application
-│   ├── config
 │   ├── controllers
+│   ├── (组件)
 │   ├── hooks
 │   ├── models
-│   ├── public
-│   │   └── index.php
 │   └── views
+| (公共层)
+├── common
+│   ├── LDAP
+│   ├── OSS
+│   └── Paas
+| (入口&配置层)
+├── config
+├── public
+│   └── index.php
+| (框架层)
 ├── system
 └── vendor
 ```
