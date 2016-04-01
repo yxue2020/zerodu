@@ -1,6 +1,11 @@
 Zerodu Framework
 ================
 
+## 开发环境约定
+ * product  生产环境
+ * devel    开发环境
+ * local    本地环境
+
 ## 目录结构
 ```
 .
