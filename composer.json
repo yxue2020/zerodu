@@ -16,13 +16,13 @@
         "php": ">=5.4.0"
     },
     "autoload": {
-        "files": [
-            "system/core/Application.php",
-            "system/core/Controller.php",
-            "system/core/Model.php"
+        "classmap": [
+            "system/core/",
+            "system/helpers"
         ],
         "psr-4": {
             "app\\": "application/",
+            "help\\": "system/helpers",
             "common\\": "common/",
             "config\\": "config"
         }

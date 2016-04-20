@@ -15,7 +15,10 @@ if (defined('APP_DEBUG')) {
     ini_set("display_errors", 1);
 }
 
-require(__DIR__ . '/../vendor/autoload.php');
+require(__DIR__ . '/../../vendor/autoload.php');
 
-$application = new noah\Application();
-$application->run();
+
+use helpers\Http;
+
+$obj = new Http();
+$obj->index();

@@ -6,4 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'helpers\\Http' => $baseDir . '/system/helpers/Http.php',
+    'noah\\Application' => $baseDir . '/system/core/Application.php',
+    'noah\\Controller' => $baseDir . '/system/core/Controller.php',
+    'noah\\Model' => $baseDir . '/system/core/Model.php',
+    'noah\\Router' => $baseDir . '/system/core/Router.php',
 );

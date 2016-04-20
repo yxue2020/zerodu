@@ -4,7 +4,7 @@ namespace app\controllers;
 use common\City;
 use app\models\Item;
 
-use noah\Controller;
+use helper\Http;
 class Welcome extends Controller
 {
 	function __construct()
@@ -24,6 +24,12 @@ class Welcome extends Controller
 		echo "<hr>";
 		print_r($_GET);
 		// var_dump();
+	}
+
+	public function http()
+	{
+		$mod_http = new Http();
+		$mod_http->index();
 	}
 }
 

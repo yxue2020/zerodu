@@ -20,7 +20,8 @@ class Application
 	{
 		try {
 			// @list($classname, $action) = $this->_parse_request_uri();
-			print_r($_SERVER); exit;
+			Router::axx();
+			exit;
 
 			if (is_null($classname)) {
 				$classname = $this->default_site;
@@ -43,16 +44,5 @@ class Application
 		} catch (Exception $e) {
 			print_r($e->getMessage());
 		}
-	}
-
-	protected function _parse_request_uri()
-	{
-		if (!isset($_SERVER['REQUEST_URI'])) {
-			return array();
-		}
-
-
-
-		return array();
 	}
 }
