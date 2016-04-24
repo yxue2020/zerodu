@@ -1,7 +1,7 @@
 <?php
 namespace app\controllers\order;
 
-use noah\Controller;
+// use noah\Controller;
 
 class Pay extends Controller
 {

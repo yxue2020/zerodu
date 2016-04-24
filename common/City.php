@@ -1,7 +1,7 @@
 <?php
 namespace common;
 
-use noah\Model;
+use core\Model;
 class City extends Model
 {
 	public function index()

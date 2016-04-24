@@ -22,6 +22,7 @@
         ],
         "psr-4": {
             "app\\": "application/",
+            "core\\": "system/core",
             "help\\": "system/helpers",
             "common\\": "common/",
             "config\\": "config"

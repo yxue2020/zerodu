@@ -1,9 +1,10 @@
 <?php
 namespace app\controllers;
 
+use app\controllers\Controller;
+
 use common\City;
 use app\models\Item;
-
 use helper\Http;
 class Welcome extends Controller
 {

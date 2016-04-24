@@ -1,5 +1,5 @@
 <?php
-namespace noah;
+namespace core;
 
 class Router
 {

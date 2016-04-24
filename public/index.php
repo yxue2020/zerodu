@@ -17,5 +17,5 @@ if (defined('APP_DEBUG')) {
 
 require(__DIR__ . '/../vendor/autoload.php');
 
-$application = new noah\Application();
+$application = new core\Application();
 $application->run();

@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'help\\' => array($baseDir . '/system/helpers'),
+    'core\\' => array($baseDir . '/system/core'),
     'config\\' => array($baseDir . '/config'),
     'common\\' => array($baseDir . '/common'),
     'app\\' => array($baseDir . '/application'),

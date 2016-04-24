@@ -1,5 +1,5 @@
 <?php
-namespace noah;
+namespace core;
 
 defined('_NAMESPACE_')  OR define('_NAMESPACE_', 'app\controllers');
 
@@ -20,14 +20,14 @@ class Application
 	{
 		try {
 			// @list($classname, $action) = $this->_parse_request_uri();
-			Router::axx();
-			exit;
+			// Router::axx();
+			// exit;
 
-			if (is_null($classname)) {
+			if (@is_null($classname)) {
 				$classname = $this->default_site;
 			}
 
-			if (is_null($action)) {
+			if (@is_null($action)) {
 				$action = $this->default_action;
 			}
 
